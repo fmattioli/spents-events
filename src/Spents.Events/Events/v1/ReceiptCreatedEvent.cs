@@ -1,6 +1,21 @@
 ﻿namespace Spents.Events.Events.v1
 {
-    public class ReceiptCreatedEvent
+
+    public record ReceiptCreatedEvent
+    {
+        public ReceiptCreatedEvent(ReceiptCreated body)
+        {
+            CreatedDate = DateTime.UtcNow;
+            Version = "v1";
+            Body = body;
+        }
+
+        private DateTime CreatedDate { get; set; }
+        public string Version { get; set; }
+        public ReceiptCreated Body { get; set; }
+    }
+
+    public record ReceiptCreated
     {
         public DateTime EventCreatedDate { get; set; }
         public string ReceiptName { get; set; } = null!;
@@ -8,7 +23,7 @@
         public IEnumerable<ReceiptItemsDetail> ReceiptItems { get; set; } = null!;
     }
 
-    public class ReceiptItemsDetail
+    public record ReceiptItemsDetail
     {
         public string Name { get; set; } = null!;
         public short Quantity { get; set; }
