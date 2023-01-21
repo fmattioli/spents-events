@@ -3,13 +3,15 @@
 
     public record ReceiptCreatedEvent
     {
-        public ReceiptCreatedEvent(ReceiptCreated body)
+        public ReceiptCreatedEvent(ReceiptCreated body, string messageKey)
         {
             CreatedDate = DateTime.UtcNow;
             Version = "v1";
             Body = body;
+            MessageKey = messageKey;
         }
 
+        public string MessageKey { get; set; }
         private DateTime CreatedDate { get; set; }
         public string Version { get; set; }
         public ReceiptCreated Body { get; set; }
