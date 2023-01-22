@@ -3,4 +3,6 @@ This project has the purpose of generating a nugget package that is included all
 
 Nugget: https://www.nuget.org/packages/Spents.Events/
 
-If you wanna know and learn about the spent-project, you can see here: https://github.com/fmattioli/spents-project.
+
+# Related projects
+https://github.com/fmattioli/spents-api
