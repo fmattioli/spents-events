@@ -19,8 +19,7 @@
 
     public record ReceiptCreated
     {
-        public DateTime EventCreatedDate { get; set; }
-        public string ReceiptName { get; set; } = null!;
+        public string EstablishmentName { get; set; } = null!;
         public DateTime ReceiptDate { get; set; }
         public IEnumerable<ReceiptItemsDetail> ReceiptItems { get; set; } = null!;
     }
