@@ -28,6 +28,7 @@
 
     public record ReceiptItemsDetail
     {
+        public Guid Id { get; set; }
         public string Name { get; set; } = null!;
         public short Quantity { get; set; }
         public decimal ItemPrice { get; set; }
