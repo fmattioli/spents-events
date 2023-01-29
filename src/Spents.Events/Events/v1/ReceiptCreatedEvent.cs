@@ -1,16 +1,17 @@
 ﻿namespace Spents.Events.Events.v1
 {
-
     public record ReceiptCreatedEvent
     {
         public ReceiptCreatedEvent(ReceiptCreated body, string messageKey)
         {
+            EventName = nameof(ReceiptCreatedEvent);
             CreatedDate = DateTime.UtcNow;
             Version = "v1";
             Body = body;
             MessageKey = messageKey;
         }
 
+        public string EventName { get; set; }
         public string MessageKey { get; set; }
         public DateTime CreatedDate { get; set; }
         public string Version { get; set; }
