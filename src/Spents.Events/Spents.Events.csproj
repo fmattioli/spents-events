@@ -11,7 +11,7 @@
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <PackageReadmeFile>readme.md</PackageReadmeFile>
     <FileVersion>1.0.0.1</FileVersion>
-    <Version>1.2.2</Version>
+    <Version>1.2.6</Version>
     <Description>This package contains the properties events  to trigger an event.</Description>
   </PropertyGroup>
 
