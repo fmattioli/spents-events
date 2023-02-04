@@ -1,37 +1,23 @@
-﻿namespace Spents.Events.Events.v1
+﻿using Spents.Domain.Entities;
+using Spents.Events.Events.Body;
+
+namespace Spents.Events.Events.v1
 {
     public record ReceiptCreatedEvent
     {
-        public ReceiptCreatedEvent(ReceiptCreated body, string messageKey)
+        public ReceiptCreatedEvent(MessageBody<Receipt> body, string messageKey)
         {
             EventName = nameof(ReceiptCreatedEvent);
             CreatedDate = DateTime.UtcNow;
             Version = "v1";
-            Body = body;
             MessageKey = messageKey;
+            Body = body;
         }
 
         public string EventName { get; set; }
         public string MessageKey { get; set; }
         public DateTime CreatedDate { get; set; }
         public string Version { get; set; }
-        public ReceiptCreated Body { get; set; }
-    }
-
-    public record ReceiptCreated
-    {
-        public Guid Id { get; set; }
-        public string EstablishmentName { get; set; } = null!;
-        public DateTime ReceiptDate { get; set; }
-        public IEnumerable<ReceiptItemsDetail> ReceiptItems { get; set; } = null!;
-    }
-
-    public record ReceiptItemsDetail
-    {
-        public Guid Id { get; set; }
-        public string Name { get; set; } = null!;
-        public short Quantity { get; set; }
-        public decimal ItemPrice { get; set; }
-        public string Observation { get; set; } = null!;
+        public MessageBody<Receipt> Body { get; set; }
     }
 }

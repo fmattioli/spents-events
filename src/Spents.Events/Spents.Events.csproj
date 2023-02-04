@@ -26,4 +26,8 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Spents.Domain" Version="1.1.1" />
+  </ItemGroup>
+
 </Project>
