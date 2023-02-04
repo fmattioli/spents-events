@@ -1,7 +1,7 @@
 ﻿using Spents.Domain.Entities;
-using Spents.Events.Events.Body;
+using Spents.Events.Body;
 
-namespace Spents.Events.Events.v1
+namespace Spents.Events.v1
 {
     public record ReceiptCreatedEvent
     {
