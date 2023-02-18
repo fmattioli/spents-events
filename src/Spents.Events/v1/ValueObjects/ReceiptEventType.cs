@@ -2,6 +2,7 @@
 {
     public enum ReceiptEventType
     {
+        None,
         ReceiptCreated,
         ReceiptUpdated,
         ReceiptDeleted
