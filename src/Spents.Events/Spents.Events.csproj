@@ -11,7 +11,7 @@
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <PackageReadmeFile>readme.md</PackageReadmeFile>
     <FileVersion>1.0.0.1</FileVersion>
-    <Version>1.3.5</Version>
+    <Version>1.4.1</Version>
     <Description>This package contains the properties events  to trigger an event.</Description>
   </PropertyGroup>
 
@@ -24,10 +24,6 @@
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Spents.Domain" Version="1.1.5" />
   </ItemGroup>
 
 </Project>
